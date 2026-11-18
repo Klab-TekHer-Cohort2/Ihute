@@ -1,0 +1,476 @@
+{
+  "app": {
+    "name": "IHUTE",
+    "subtitle": "Ijwi ry'Umuhinzi",
+    "tagline": "Raporo y'Umuhinzi Umwe. Umuryango Urarinzwe."
+  },
+  "nav": {
+    "home": "Ahabanza",
+    "report": "Tanga ikibazo",
+    "assistant": "Umujyanama",
+    "alerts": "Impuruza",
+    "dashboard": "Imbonerahamwe",
+    "clusters": "Uduce twibasiwe",
+    "users": "Abakoresha",
+    "logout": "Sohoka",
+    "overview": "Incamake",
+    "reports": "Raporo",
+    "map": "Ikarita"
+  },
+  "auth": {
+    "login": "Injira",
+    "continueAs": "Komeza nka (igerageza)",
+    "tabsLabel": "Injira cyangwa ufungure konti",
+    "tabs": {
+      "signIn": "Injira",
+      "register": "Fungura konti"
+    },
+    "hero": {
+      "live": "Amakuru y'ubuhinzi ako kanya",
+      "eyebrow": "Ikigo cy'ubuhinzi n'ubworozi",
+      "title": "Guteza imbere ubuhinzi bw'u Rwanda hakoreshejwe AI.",
+      "body": "Uburyo bugezweho bwo kurinda imyaka, no gufashwa n'inzobere za RAB ku gihe.",
+      "imageCaption": "Gukurikirana amaterasi",
+      "partnership": "Ku bufatanye n'Ikigo cy'Igihugu Gishinzwe Guteza Imbere Ubuhinzi n'Ubworozi (RAB)"
+    },
+    "features": {
+      "pest": {
+        "title": "Kumenya indwara hakiri kare",
+        "body": "Kumenya indwara z'imyaka hakiri kare hakoreshejwe ifoto gusa."
+      },
+      "voice": {
+        "title": "Umujyanama w'ijwi",
+        "body": "Vugana n'umujyanama mu Kinyarwanda ubone ibisubizo ako kanya."
+      },
+      "officer": {
+        "title": "Guhuza n'abakozi ba RAB",
+        "body": "Ihuze n'abashinzwe ubuhinzi mu murenge wawe no hanze yawo."
+      },
+      "alerts": {
+        "title": "Imburira n'impuruza",
+        "body": "Uburyo bwo gutanga integuza ku ndwara n'ibyonnyi byihutirwa."
+      }
+    },
+    "signIn": {
+      "title": "Murakaza neza",
+      "subtitle": "Injira muri konti yawe ya IHUTE",
+      "forgot": "Wibagiwe ijambo ry'ibanga?",
+      "submit": "Injira"
+    },
+    "register": {
+      "title": "Fungura konti nshya",
+      "subtitle": "Fungura konti y'umuhinzi cyangwa koperative kuri IHUTE",
+      "category": "Hitamo icyiciro cyawe",
+      "landLocation": "Ahantu umurima uherereye",
+      "workArea": "Aho ukorera",
+      "terms": "Nemeye amabwiriza n'amategeko agenga IHUTE",
+      "submit": "Fungura konti"
+    },
+    "categories": {
+      "farmer": {
+        "title": "Umuhinzi / Koperative",
+        "body": "Umuhinzi muto cyangwa koperative"
+      },
+      "officer": {
+        "title": "Umukozi wa RAB",
+        "body": "Umujyanama mu buhinzi cyangwa umukozi"
+      }
+    },
+    "fields": {
+      "identifier": "Telefone, imeli cyangwa indangamuntu",
+      "password": "Ijambo ry'ibanga cyangwa PIN",
+      "firstName": "Izina rya mbere",
+      "lastName": "Izina rya kabiri",
+      "nationalId": "Nomero y'indangamuntu (imibare 16)",
+      "contact": "Telefone cyangwa imeli",
+      "district": "Akarere",
+      "sector": "Umurenge"
+    },
+    "placeholders": {
+      "identifier": "urugero: 0788 123 456",
+      "password": "Andika ijambo ry'ibanga",
+      "contact": "urugero: 0788 123 456 cyangwa izina@coop.rw",
+      "district": "Hitamo akarere",
+      "sector": "urugero: Kinigi",
+      "newPassword": "Hanga ijambo ry'ibanga rikomeye"
+    },
+    "hints": {
+      "nationalId": "Iboneka imbere ku ndangamuntu yawe",
+      "password": "Nibura inyuguti {{min}}"
+    },
+    "errors": {
+      "required": "Iki gice kirakenewe",
+      "identifier": "Andika nomero ya telefone, imeli cyangwa indangamuntu nyayo",
+      "password": "Rigomba kugira nibura inyuguti {{min}}",
+      "nationalId": "Indangamuntu igira imibare 16",
+      "contact": "Andika telefone nyayo (07X XXX XXXX) cyangwa imeli",
+      "terms": "Emera amabwiriza kugira ngo ukomeze"
+    },
+    "showPassword": "Erekana ijambo ry'ibanga",
+    "hidePassword": "Hisha ijambo ry'ibanga",
+    "offline": {
+      "title": "Nta murongo wa interineti ufite?",
+      "dialPrefix": "Kanda",
+      "dialSuffix": "kuri telefone isanzwe ubone amakuru y'ubuhinzi n'iyo nta interineti."
+    },
+    "footer": {
+      "terms": "Amategeko",
+      "privacy": "Umutekano"
+    }
+  },
+  "roles": {
+    "farmer": "Umuhinzi",
+    "officer": "Umujyanama w'ubuhinzi",
+    "admin": "Umuyobozi wa sisitemu"
+  },
+  "common": {
+    "comingSoon": "Iyi paji izubakwa vuba.",
+    "notFound": "Paji ntibonetse",
+    "goHome": "Subira ahabanza",
+    "language": "Ururimi",
+    "demo": "Urugero / Demo",
+    "demoShort": "Urugero",
+    "optional": "si ngombwa",
+    "backHome": "Subira ahabanza"
+  },
+  "provinces": {
+    "kigali": "Umujyi wa Kigali",
+    "north": "Intara y'Amajyaruguru",
+    "south": "Intara y'Amajyepfo",
+    "east": "Intara y'Iburasirazuba",
+    "west": "Intara y'Iburengerazuba"
+  },
+  "shell": {
+    "officerSection": "Abajyanama b'ubuhinzi",
+    "adminSection": "Ubuyobozi",
+    "manage": "Gucunga",
+    "reviewFirst": {
+      "title": "Banza usuzume.",
+      "body": "Impuruza yoherezwa gusa umujyanama amaze kwemeza."
+    },
+    "pendingReports_one": "Raporo {{count}} itegereje",
+    "pendingReports_other": "Raporo {{count}} zitegereje"
+  },
+  "crops": {
+    "maize": "Ibigori",
+    "beans": "Ibishyimbo",
+    "cassava": "Imyumbati",
+    "potato": "Ibirayi"
+  },
+  "cropsLatin": {
+    "maize": "Maize",
+    "beans": "Beans",
+    "cassava": "Cassava",
+    "potato": "Irish potatoes"
+  },
+  "reportStatus": {
+    "pending": "Isuzumwa",
+    "needs_photo": "Ifoto nshya",
+    "verified": "Byemejwe",
+    "rejected": "Byanzwe"
+  },
+  "alertStatus": {
+    "draft": "Ntirayoherezwa",
+    "sent": "Yoherejwe"
+  },
+  "alertLevel": {
+    "0": "Amakuru",
+    "1": "Kuba maso",
+    "2": "Imburira",
+    "3": "Ibyihutirwa"
+  },
+  "time": {
+    "justNow": "ubu nyine",
+    "minutes_one": "hashize umunota {{count}}",
+    "minutes_other": "hashize iminota {{count}}",
+    "hours_one": "hashize isaha {{count}}",
+    "hours_other": "hashize amasaha {{count}}",
+    "days_one": "hashize umunsi {{count}}",
+    "days_other": "hashize iminsi {{count}}"
+  },
+  "farmer": {
+    "home": {
+      "greeting": "Muraho, {{name}}",
+      "title": "Umufasha wawe mu buhinzi.",
+      "howItWorks": "Umva uko IHUTE ikora",
+      "steps": {
+        "1": {
+          "title": "Fata ifoto",
+          "body": "Fotora ikibabi cyangwa igihingwa kirwaye ku manywa."
+        },
+        "2": {
+          "title": "Bona igisubizo cya mbere",
+          "body": "IHUTE ikubwira icyo ikibazo gishobora kuba mu masegonda."
+        },
+        "3": {
+          "title": "Umujyanama aremeza",
+          "body": "Umujyanama wo hafi yawe arabisuzuma akakoherereza inama."
+        }
+      },
+      "helpToday": "Twagufasha iki uyu munsi?",
+      "actions": {
+        "photo": {
+          "title": "Fata ifoto",
+          "body": "Menya indwara y'igihingwa"
+        },
+        "voice": {
+          "title": "Baza n'ijwi",
+          "body": "Vuga ikibazo cyawe"
+        },
+        "alerts": {
+          "title": "Impuruza hafi yawe",
+          "body": "Rinda ibihingwa byawe"
+        }
+      },
+      "myCrops": "Ibihingwa byawe",
+      "reportCrop": "Tanga ikibazo cy'{{crop}}",
+      "myReports": "Raporo zawe",
+      "alertMeta": "Km {{km}} uvuye hano · Byemejwe n'umujyanama",
+      "openAlert": "Umva impuruza"
+    },
+    "report": {
+      "title": "Tanga ikibazo",
+      "subtitle": "Intambwe eshatu gusa. Umujyanama asuzuma buri raporo.",
+      "chooseCrop": "Ni ikihe gihingwa?",
+      "takePhoto": "Fata ifoto",
+      "photoTip": "Egera ikibabi kirwaye, ku manywa, ikibazo kigaragara neza.",
+      "preview": "Ifoto wafashe",
+      "retake": "Ongera ufate",
+      "remove": "Siba ifoto",
+      "tapToTake": "Kanda hano ufate ifoto",
+      "orUpload": "cyangwa uhitemo iri muri telefone",
+      "describe": "Sobanura ibyo ubona",
+      "describePlaceholder": "urugero: Amababi afite ibibara birebire by'ikigina kandi arimo kuma",
+      "errors": {
+        "notImage": "Iyo dosiye si ifoto. Hitamo ifoto.",
+        "crop": "Banza uhitemo igihingwa.",
+        "photo": "Ongeraho ifoto cyangwa usobanure ikibazo."
+      },
+      "analyzing": "Turasuzuma ifoto yawe…",
+      "submit": "Ohereza raporo",
+      "sentTitle": "Raporo #{{id}} yoherejwe",
+      "sentBody": "Umujyanama wo hafi yawe arayisuzuma akakoherereza inama.",
+      "aiThinks": "IHUTE itekereza ko ari",
+      "notConfirmed": "Ibi ntibiremezwa. Tegereza igisubizo cy'umujyanama mbere yo gukoresha umuti.",
+      "whatNow": "Icyo wakora ubu",
+      "advice": {
+        "1": "Reba ibindi bimera mu murima wawe, umenye umubare w'ibifite ibimenyetso nk'ibi.",
+        "2": "Kura amababi yangiritse cyane, uyashyire kure y'ibimera bizima.",
+        "3": "Ntutere umuti mbere y'uko umujyanama yemeza ikibazo."
+      },
+      "another": "Tanga ikindi kibazo"
+    },
+    "alerts": {
+      "title": "Impuruza",
+      "subtitle": "Imburira zemejwe n'abajyanama b'ubuhinzi mu gace kawe.",
+      "empty": "Nta mpuruza ihari ubu. Agace kawe ni amahoro.",
+      "radius": "muri km {{km}}",
+      "verifiedBy": "Byemejwe n'umujyanama",
+      "nearYou": "Iyi mpuruza ireba umurenge wawe."
+    },
+    "assistant": {
+      "title": "Umujyanama",
+      "subtitle": "Baza ikibazo icyo ari cyo cyose ku buhinzi mu Kinyarwanda cyangwa mu Cyongereza.",
+      "welcome": "Muraho! Ndi umujyanama wa IHUTE. Mbaza ku byonnyi, indwara, ifumbire cyangwa igihe cyo gutera.",
+      "typing": "Umujyanama arandika",
+      "placeholder": "Andika ikibazo cyawe…",
+      "mic": "Vuga ikibazo cyawe",
+      "stopMic": "Hagarika kumva",
+      "send": "Ohereza",
+      "suggestions": {
+        "armyworm": "Nakwirinda nkongwa nte?",
+        "blight": "Amababi y'ibirayi byanjye arirabura",
+        "fertilizer": "Ni iyihe fumbire y'ibigori?",
+        "planting": "Ibishyimbo bitererwa ryari?"
+      },
+      "answers": {
+        "armyworm": "Nkongwa irya amababi y'ibigori bikiri bito igasiga imyanda imeze nk'ivu ry'ibiti.\n• Reba ibimera 20 mu murima kabiri mu cyumweru.\n• Mena amagi n'inyo nto ukoresheje intoki.\n• Niba kimwe muri bitanu cyangiritse, baza umujyanama umuti wemewe.",
+        "blight": "Ibibara byirabura bikwira ku mababi y'ibirayi nyuma y'imvura akenshi ni ububore (late blight).\n• Kura amababi arwaye uyatabe.\n• Ntukuhire ku mababi.\n• Ohereza ifoto ukoresheje \"Tanga ikibazo\" umujyanama abyemeze akugire inama.",
+        "fertilizer": "Ku bigori, abahinzi benshi bakoresha DAP mu gutera na Urea iyo ibigori bigeze ku ivi. Ingano nyayo iterwa n'ubutaka bwawe; baza umujyanama cyangwa serivisi ya RAB yo gupima ubutaka.",
+        "planting": "Mu bice byinshi by'u Rwanda, ibishyimbo biterwa mu ntangiriro y'Igihembwe A (Nzeri) n'Igihembwe B (Gashyantare–Werurwe). Tera imvura imaze kugwa neza.",
+        "fallback": "Murakoze ku kibazo cyanyu. Nakigejeje ku mujyanama wo hafi yanyu ngo abahe igisubizo nyacyo. Ku gihingwa kirwaye, koresha \"Tanga ikibazo\" wongereho ifoto."
+      }
+    }
+  },
+  "officer": {
+    "table": {
+      "filterCrop": "Hitamo igihingwa",
+      "allCrops": "Ibihingwa byose",
+      "search": "Shakisha",
+      "empty": "Nta raporo ihuye n'ibyo ushaka.",
+      "report": "Raporo",
+      "farmer": "Umuhinzi",
+      "crop": "Igihingwa",
+      "ai": "AI / Ikibazo",
+      "location": "Ahantu",
+      "status": "Uko bimeze",
+      "open": "Fungura",
+      "openReport": "Fungura raporo #{{id}}",
+      "count": "Raporo {{shown}} muri {{total}}"
+    },
+    "overview": {
+      "title": "Incamake y'akarere",
+      "subtitle": "Kurikirana ibihingwa. Fasha abahinzi gufata ibyemezo.",
+      "stats": {
+        "pending": "Raporo zitegereje",
+        "verifiedToday": "Byemejwe uyu munsi",
+        "draftAlerts": "Impuruza zitegereje",
+        "sectors": "Imirenge ikurikiranwa"
+      },
+      "mapTitle": "Raporo ku ikarita",
+      "mapHint": "Kanda ku ruziga urebe raporo z'uwo murenge. Ahantu ni urugero.",
+      "promoTitle": "Ijwi ryabo rirakenewe.",
+      "promoBody": "Buri raporo ni umuhinzi utegereje ubufasha bwawe.",
+      "startReview": "Tangira gusuzuma",
+      "allDone": "Raporo zose zasuzumwe. Mwakoze!",
+      "queue": "Raporo zitegereje",
+      "seeAll": "Reba zose",
+      "footer": "Amakuru yose ni urugero · Nta mpuruza yoherezwa mbere yo kwemezwa n'umujyanama."
+    },
+    "reports": {
+      "title": "Raporo",
+      "subtitle": "Raporo z'abahinzi mu karere kawe.",
+      "all": "Zose"
+    },
+    "alerts": {
+      "title": "Impuruza z'umuryango",
+      "subtitle": "Tegura, suzuma kandi wohereze impuruza ku bahinzi.",
+      "new": "Impuruza nshya",
+      "flashSent_one": "Impuruza yoherejwe ku muhinzi {{count}}.",
+      "flashSent_other": "Impuruza yoherejwe ku bahinzi bagera kuri {{count}}.",
+      "flashDraft": "Igishushanyo cyabitswe.",
+      "drafts": "Zitegereje kwemezwa",
+      "sent": "Zoherejwe",
+      "noDrafts": "Nta mpuruza itegereje."
+    },
+    "map": {
+      "title": "Ikarita",
+      "subtitle": "Aho raporo ziturutse (ahantu ni urugero).",
+      "legendVerified": "Hari raporo zemejwe",
+      "legendPending": "Raporo zigisuzumwa",
+      "sectors": "Imirenge",
+      "reportsCount_one": "raporo {{count}}",
+      "reportsCount_other": "raporo {{count}}",
+      "verifiedCount_one": "{{count}} yemejwe",
+      "verifiedCount_other": "{{count}} zemejwe"
+    }
+  },
+  "review": {
+    "photoAlt": "Ifoto y'umuhinzi y'{{crop}}",
+    "demoPhoto": "Ifoto y'urugero",
+    "notFound": "Raporo ntibonetse",
+    "back": "Raporo zitegereje",
+    "title": "Suzuma raporo #{{id}}",
+    "farmerPhoto": "Ifoto y'umuhinzi",
+    "farmer": "Umuhinzi",
+    "crop": "Igihingwa",
+    "timeline": "Uko raporo yagenze",
+    "aiSaw": "Icyo AI yabonye",
+    "notConfirmed": "Ntibyemejwe",
+    "confidence": "Icyizere cya AI",
+    "alternatives": "Ibindi bishoboka",
+    "other": "Ibindi",
+    "decision": "Icyemezo cy'umujyanama",
+    "diseaseLabel": "Indwara / udukoko",
+    "adviceLabel": "Icyitonderwa ku muhinzi",
+    "sendVoice": "Ohereza inyandiko n'ijwi mu Kinyarwanda",
+    "askPhoto": "Saba indi foto",
+    "verify": "Emeza raporo",
+    "reject": "Hakana: si ikibazo cy'igihingwa",
+    "noAutoAlert": "Kwemeza raporo ntibihita byohereza impuruza.",
+    "footerTitle": "Umujyanama ni we ufata icyemezo cya nyuma.",
+    "footerBody": "Amakuru yose ni urugero · Nta mpuruza yoherezwa ku baturage kuri iyi ntambwe.",
+    "skip": "Simbuka ujye ku yindi raporo",
+    "done": {
+      "verified": "Raporo yemejwe",
+      "needs_photo": "Hasabwe indi foto",
+      "rejected": "Raporo yahakanywe",
+      "pending": "Itegereje isuzuma"
+    },
+    "createAlert": "Kora impuruza y'umuryango",
+    "reopen": "Hindura icyemezo",
+    "next": "Raporo ikurikira",
+    "steps": {
+      "received": "Ifoto yakiriwe",
+      "receivedBody": "Umuhinzi yatanze uruhushya rwo gusangiza aho ari.",
+      "ai": "AI yatanze igisubizo",
+      "now": "Ubu",
+      "waiting": "Itegereje isuzuma",
+      "waitingBody": "Umujyanama arareba ifoto n'inama za AI."
+    },
+    "defaultAdvice": "Reba ibindi bimera. Bika ifoto; umujyanama azagusura mbere yo guhitamo umuti."
+  },
+  "alertForm": {
+    "defaultMessage": "Reba ibihingwa byawe. Nubona ibimenyetso, fata ifoto ubaze umujyanama. Ntukoreshe umuti utabanje kugisha inama umujyanama w'ubuhinzi.",
+    "notFound": "Impuruza ntibonetse",
+    "back": "Impuruza zitegereje",
+    "tooLong": "Ntirenze inyuguti {{max}} (SMS 2).",
+    "needReport": "Huza nibura raporo imwe yemejwe.",
+    "title": "Emeza impuruza y'umuryango",
+    "crop": "Igihingwa",
+    "sector": "Umurenge",
+    "radius": "Intera",
+    "s1": "Ahantu n'abahabwa ubutumwa",
+    "s2": "Ubutumwa mu Kinyarwanda",
+    "s3": "Raporo zemejwe zishingirwaho",
+    "reach_one": "Umuhinzi {{count}} azahabwa ubutumwa · Umubare w'urugero",
+    "reach_other": "Abahinzi {{count}} bazahabwa ubutumwa · Umubare w'urugero",
+    "level": "Urwego",
+    "titleLabel": "Umutwe",
+    "messageLabel": "Inama ngufi ku bahinzi",
+    "sms_one": "SMS {{count}}",
+    "sms_other": "SMS {{count}}",
+    "voiceTitle": "Ubutumwa bw'ijwi",
+    "voiceBody": "Ijwi mu Kinyarwanda rikorwa iyo impuruza yoherejwe.",
+    "noVerified": "Nta raporo yemejwe y'iki gihingwa. Banza wemeze raporo.",
+    "preview": "Uko umuhinzi azabibona",
+    "previewHint": "Urugero rwa mbere yo kohereza",
+    "awaiting": "Itegereje kwemezwa",
+    "within": "Muri km {{km}}",
+    "confirmFirst": "Banza wemeze",
+    "check1": "Nasuzumye raporo zishingirwaho.",
+    "check2": "Nasuzumye inyandiko n'ijwi.",
+    "send": "Emeza kandi wohereze",
+    "tickBoth": "Emeza ibisanduku byombi kugira ngo wohereze.",
+    "completeForm": "Uzuza ifishi kugira ngo wohereze.",
+    "saveDraft": "Bika nk'igishushanyo",
+    "footerTitle": "Buri mpuruza igira uwemeje n'igihe yemejwe.",
+    "footerBody": "Nyuma yo kwemeza, abahinzi bo mu gace kahiswemo bahabwa inyandiko n'ijwi. Amakuru yose hano ni urugero."
+  },
+  "admin": {
+    "overview": {
+      "title": "Incamake ya sisitemu",
+      "subtitle": "Abakoresha, raporo n'imikorere ya AI.",
+      "reset": "Subiza amakuru y'urugero",
+      "resetConfirm": "Gusubiza raporo, impuruza n'abakoresha b'urugero bose?",
+      "stats": {
+        "farmers": "Abahinzi bakora",
+        "officers": "Abajyanama bakora",
+        "reports": "Raporo",
+        "alertsSent": "Impuruza zoherejwe"
+      },
+      "byCrop": "Raporo ku gihingwa",
+      "model": "AI",
+      "agreement": "Abajyanama bemeranya na AI",
+      "reviewed": "Raporo zasuzumwe",
+      "agreementHint": "Ijanisha rya raporo zemejwe aho umujyanama yemeje igisubizo cya mbere cya AI.",
+      "recent": "Raporo ziheruka"
+    },
+    "users": {
+      "title": "Abakoresha",
+      "subtitle": "Abahinzi, abajyanama n'abayobozi.",
+      "all": "Bose",
+      "cols": {
+        "name": "Izina",
+        "role": "Uruhare",
+        "phone": "Telefone",
+        "location": "Aho ari",
+        "joined": "Yinjiye",
+        "status": "Uko ameze"
+      },
+      "toggle": "Kanda ukore cyangwa uhagarike konti",
+      "active": "Arakora",
+      "inactive": "Yahagaritswe"
+    }
+  }
+}

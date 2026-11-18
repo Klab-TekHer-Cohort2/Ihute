@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+/*
+ * IHUTE design tokens, taken from the screen designs in /design
+ * (farmer home, officer overview, colors.png).
+ */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Primary green: buttons, active states, links */
+  --color-brand-50: #f1f5ee;
+  --color-brand-100: #e5ede0;
+  --color-brand-200: #c6d8c7;
+  --color-brand-300: #a8c5af;
+  --color-brand-400: #6f9a7b;
+  --color-brand-500: #3e7e57;
+  --color-brand-600: #2b7048;
+  --color-brand-700: #255f3e;
+  --color-brand-800: #1f4e34;
+  --color-brand-900: #163f2d;
+
+  /* Deep forest: sidebar, hero panels, headings */
+  --color-forest-600: #466a50;
+  --color-forest-700: #325943;
+  --color-forest-800: #254c38;
+  --color-forest-900: #163f2d;
+  --color-forest-950: #0f2e20;
+
+  /* Warm neutrals: page background */
+  --color-cream-50: #fbfaf5;
+  --color-cream-100: #f6f5ee;
+  --color-cream-200: #ece9dc;
+
+  /* Harvest yellow: highlights, pending states, warnings */
+  --color-harvest-100: #fdf0cf;
+  --color-harvest-200: #f8e0a0;
+  --color-harvest-400: #f2c957;
+  --color-harvest-500: #e0a526;
+  --color-harvest-700: #8a5a12;
+
+  --color-soil-500: #8d6e4f;
+
+  /* Alert levels (doc section 7.4) */
+  --color-alert-0: #64748b;
+  --color-alert-1: #e0a526;
+  --color-alert-2: #ea580c;
+  --color-alert-3: #dc2626;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-cream-100 text-forest-900 antialiased;
+}
+
+/* Leaflet: muted tiles + count labels on cluster circles (officer map) */
+.ihute-tiles {
+  filter: sepia(0.35) hue-rotate(45deg) saturate(0.9);
+}
+.leaflet-tooltip.ihute-count {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  color: var(--color-harvest-700);
+  text-align: center;
+  line-height: 1.1;
+}
+.leaflet-tooltip.ihute-count::before {
+  display: none;
+}
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: var(--color-brand-100);
+}

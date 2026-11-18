@@ -1,0 +1,476 @@
+{
+  "app": {
+    "name": "IHUTE",
+    "subtitle": "Ijwi ry'Umuhinzi",
+    "tagline": "One Farmer's Report. A Community Protected."
+  },
+  "nav": {
+    "home": "Home",
+    "report": "Report a problem",
+    "assistant": "Assistant",
+    "alerts": "Alerts",
+    "dashboard": "Dashboard",
+    "clusters": "Clusters",
+    "users": "Users",
+    "logout": "Log out",
+    "overview": "Overview",
+    "reports": "Reports",
+    "map": "Map"
+  },
+  "auth": {
+    "login": "Log in",
+    "continueAs": "Continue as (demo)",
+    "tabsLabel": "Sign in or create an account",
+    "tabs": {
+      "signIn": "Sign in",
+      "register": "Register"
+    },
+    "hero": {
+      "live": "Live agri-telemetry",
+      "eyebrow": "Rwanda's farming & livestock hub",
+      "title": "Empowering Rwandan agriculture with AI.",
+      "body": "A complete system for protecting crops, with RAB experts on hand to help.",
+      "imageCaption": "Terrace agro-sensing",
+      "partnership": "In partnership with the Rwanda Agriculture and Animal Resources Development Board (RAB)"
+    },
+    "features": {
+      "pest": {
+        "title": "Early pest detection",
+        "body": "Identify crop diseases quickly with a single photo."
+      },
+      "voice": {
+        "title": "Voice AI assistant",
+        "body": "Talk to an advisor in Kinyarwanda and get instant answers."
+      },
+      "officer": {
+        "title": "RAB officer link",
+        "body": "Connect with extension officers in your sector and beyond."
+      },
+      "alerts": {
+        "title": "Early warnings & alerts",
+        "body": "Get notified before a disease spreads to your farm."
+      }
+    },
+    "signIn": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your IHUTE account",
+      "forgot": "Forgot password?",
+      "submit": "Sign in"
+    },
+    "register": {
+      "title": "Create a new account",
+      "subtitle": "Create your IHUTE farmer or cooperative account",
+      "category": "Select user category",
+      "landLocation": "Land location & plot",
+      "workArea": "Work area",
+      "terms": "I accept the IHUTE Terms & Privacy Policy",
+      "submit": "Create account"
+    },
+    "categories": {
+      "farmer": {
+        "title": "Farmer / Cooperative",
+        "body": "Smallholder farmer or agri-coop"
+      },
+      "officer": {
+        "title": "RAB officer",
+        "body": "Extension agronomist or officer"
+      }
+    },
+    "fields": {
+      "identifier": "Phone, email or National ID",
+      "password": "Password or PIN",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "nationalId": "National ID (16 digits)",
+      "contact": "Phone or email",
+      "district": "District",
+      "sector": "Sector"
+    },
+    "placeholders": {
+      "identifier": "e.g. 0788 123 456",
+      "password": "Enter your password",
+      "contact": "e.g. 0788 123 456 or name@coop.rw",
+      "district": "Choose a district",
+      "sector": "e.g. Kinigi",
+      "newPassword": "Choose a strong password"
+    },
+    "hints": {
+      "nationalId": "Found on the front of your ID card",
+      "password": "At least {{min}} characters"
+    },
+    "errors": {
+      "required": "This field is required",
+      "identifier": "Enter a valid Rwandan phone number, email or National ID",
+      "password": "Must be at least {{min}} characters",
+      "nationalId": "A National ID has 16 digits",
+      "contact": "Enter a valid phone number (07X XXX XXXX) or email",
+      "terms": "Please accept the terms to continue"
+    },
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "offline": {
+      "title": "No internet connection?",
+      "dialPrefix": "Dial",
+      "dialSuffix": "on any phone to get farming information on basic handsets without internet."
+    },
+    "footer": {
+      "terms": "Terms",
+      "privacy": "Privacy"
+    }
+  },
+  "roles": {
+    "farmer": "Farmer",
+    "officer": "Agricultural officer",
+    "admin": "Administrator"
+  },
+  "common": {
+    "comingSoon": "This screen will be built next.",
+    "notFound": "Page not found",
+    "goHome": "Go home",
+    "language": "Language",
+    "demo": "Demo data",
+    "demoShort": "Demo",
+    "optional": "optional",
+    "backHome": "Back to home"
+  },
+  "provinces": {
+    "kigali": "City of Kigali",
+    "north": "Northern Province",
+    "south": "Southern Province",
+    "east": "Eastern Province",
+    "west": "Western Province"
+  },
+  "shell": {
+    "officerSection": "Agricultural officers",
+    "adminSection": "Administration",
+    "manage": "Account",
+    "reviewFirst": {
+      "title": "Review first.",
+      "body": "Alerts reach farmers only after an officer approves them."
+    },
+    "pendingReports_one": "{{count}} report waiting",
+    "pendingReports_other": "{{count}} reports waiting"
+  },
+  "crops": {
+    "maize": "Maize",
+    "beans": "Beans",
+    "cassava": "Cassava",
+    "potato": "Irish potatoes"
+  },
+  "cropsLatin": {
+    "maize": "Ibigori",
+    "beans": "Ibishyimbo",
+    "cassava": "Imyumbati",
+    "potato": "Ibirayi"
+  },
+  "reportStatus": {
+    "pending": "Under review",
+    "needs_photo": "New photo requested",
+    "verified": "Verified",
+    "rejected": "Rejected"
+  },
+  "alertStatus": {
+    "draft": "Not sent",
+    "sent": "Sent"
+  },
+  "alertLevel": {
+    "0": "Info",
+    "1": "Watch",
+    "2": "Warning",
+    "3": "Emergency"
+  },
+  "time": {
+    "justNow": "just now",
+    "minutes_one": "{{count}} min ago",
+    "minutes_other": "{{count}} min ago",
+    "hours_one": "{{count}} h ago",
+    "hours_other": "{{count}} h ago",
+    "days_one": "{{count}} day ago",
+    "days_other": "{{count}} days ago"
+  },
+  "farmer": {
+    "home": {
+      "greeting": "Hello, {{name}}",
+      "title": "Your farming assistant.",
+      "howItWorks": "How IHUTE works",
+      "steps": {
+        "1": {
+          "title": "Take a photo",
+          "body": "Photograph the sick leaf or plant in daylight."
+        },
+        "2": {
+          "title": "Get a first answer",
+          "body": "IHUTE suggests what the problem might be within seconds."
+        },
+        "3": {
+          "title": "An officer confirms",
+          "body": "Your local officer checks it and sends you advice."
+        }
+      },
+      "helpToday": "How can we help you today?",
+      "actions": {
+        "photo": {
+          "title": "Take a photo",
+          "body": "Identify crop diseases"
+        },
+        "voice": {
+          "title": "Ask by voice",
+          "body": "Describe your problem"
+        },
+        "alerts": {
+          "title": "Alerts near you",
+          "body": "Protect your crops"
+        }
+      },
+      "myCrops": "Your crops",
+      "reportCrop": "Report a problem with {{crop}}",
+      "myReports": "Your reports",
+      "alertMeta": "Within {{km}} km of you · Verified by an officer",
+      "openAlert": "Listen to alert"
+    },
+    "report": {
+      "title": "Report a problem",
+      "subtitle": "Three quick steps. An officer will check every report.",
+      "chooseCrop": "Which crop?",
+      "takePhoto": "Take a photo",
+      "photoTip": "Get close to the sick leaf, in daylight, with the problem in focus.",
+      "preview": "Photo preview",
+      "retake": "Take again",
+      "remove": "Remove photo",
+      "tapToTake": "Tap to take a photo",
+      "orUpload": "or choose one from your phone",
+      "describe": "Describe what you see",
+      "describePlaceholder": "e.g. Leaves have long brown spots and are drying from the tips",
+      "errors": {
+        "notImage": "That file is not a photo. Please choose an image.",
+        "crop": "Choose the crop first.",
+        "photo": "Add a photo or describe the problem."
+      },
+      "analyzing": "Checking your photo…",
+      "submit": "Send report",
+      "sentTitle": "Report #{{id}} sent",
+      "sentBody": "Your local officer will review it and send you advice.",
+      "aiThinks": "IHUTE thinks it may be",
+      "notConfirmed": "This is not confirmed yet. Wait for the officer's answer before using any pesticide.",
+      "whatNow": "What to do now",
+      "advice": {
+        "1": "Check the rest of your field and note how many plants show the same signs.",
+        "2": "Remove badly affected leaves and keep them away from healthy plants.",
+        "3": "Do not spray pesticide before your officer confirms the problem."
+      },
+      "another": "Report another problem"
+    },
+    "alerts": {
+      "title": "Alerts",
+      "subtitle": "Warnings approved by agricultural officers in your area.",
+      "empty": "No alerts right now. Your area is clear.",
+      "radius": "{{km}} km radius",
+      "verifiedBy": "Verified by an officer",
+      "nearYou": "This alert covers your sector."
+    },
+    "assistant": {
+      "title": "Assistant",
+      "subtitle": "Ask any farming question in Kinyarwanda or English.",
+      "welcome": "Hello! I'm the IHUTE assistant. Ask me about pests, diseases, fertilizer or planting.",
+      "typing": "Assistant is typing",
+      "placeholder": "Type your question…",
+      "mic": "Speak your question",
+      "stopMic": "Stop listening",
+      "send": "Send",
+      "suggestions": {
+        "armyworm": "How do I control fall armyworm?",
+        "blight": "My potato leaves are going black",
+        "fertilizer": "Which fertilizer for maize?",
+        "planting": "When should I plant beans?"
+      },
+      "answers": {
+        "armyworm": "Fall armyworm (nkongwa) eats young maize leaves and leaves sawdust-like droppings.\n• Check 20 plants across your field twice a week.\n• Crush egg masses and young larvae by hand.\n• If more than 1 in 5 plants is damaged, ask your officer which approved product to use.",
+        "blight": "Black, spreading patches on potato leaves after rain are often late blight.\n• Remove and bury affected leaves.\n• Don't water the leaves.\n• Send a photo with \"Report a problem\" so an officer can confirm and advise on spraying.",
+        "fertilizer": "For maize, many farmers use DAP at planting and Urea when plants are knee high. Exact amounts depend on your soil, so ask your officer or the RAB soil test service.",
+        "planting": "In most of Rwanda, beans are planted at the start of Season A (September) and Season B (February–March). Plant when the rains are steady.",
+        "fallback": "Thanks for your question. I've noted it for your local officer, who can give you a precise answer. For a sick plant, use \"Report a problem\" and add a photo."
+      }
+    }
+  },
+  "officer": {
+    "table": {
+      "filterCrop": "Filter by crop",
+      "allCrops": "All crops",
+      "search": "Search",
+      "empty": "No reports match.",
+      "report": "Report",
+      "farmer": "Farmer",
+      "crop": "Crop",
+      "ai": "AI / problem",
+      "location": "Location",
+      "status": "Status",
+      "open": "Open",
+      "openReport": "Open report #{{id}}",
+      "count": "Showing {{shown}} of {{total}} reports"
+    },
+    "overview": {
+      "title": "District overview",
+      "subtitle": "Monitor crops. Help farmers make decisions.",
+      "stats": {
+        "pending": "Reports waiting",
+        "verifiedToday": "Verified today",
+        "draftAlerts": "Alerts waiting",
+        "sectors": "Sectors with reports"
+      },
+      "mapTitle": "Reports on the map",
+      "mapHint": "Tap a circle to filter the list by sector. Demo locations.",
+      "promoTitle": "Their voice matters.",
+      "promoBody": "Every report is a farmer waiting for your help.",
+      "startReview": "Start reviewing",
+      "allDone": "All reports reviewed. Great work!",
+      "queue": "Reports waiting",
+      "seeAll": "See all",
+      "footer": "All data is demo data · No alert is sent before an officer approves it."
+    },
+    "reports": {
+      "title": "Reports",
+      "subtitle": "Farmer reports in your district.",
+      "all": "All"
+    },
+    "alerts": {
+      "title": "Community alerts",
+      "subtitle": "Draft, review and send alerts to farmers.",
+      "new": "New alert",
+      "flashSent_one": "Alert sent to about {{count}} farmer.",
+      "flashSent_other": "Alert sent to about {{count}} farmers.",
+      "flashDraft": "Draft saved.",
+      "drafts": "Waiting for approval",
+      "sent": "Sent",
+      "noDrafts": "No alerts waiting."
+    },
+    "map": {
+      "title": "Map",
+      "subtitle": "Where reports are coming from (demo locations).",
+      "legendVerified": "Has verified reports",
+      "legendPending": "Reports under review",
+      "sectors": "Sectors",
+      "reportsCount_one": "{{count}} report",
+      "reportsCount_other": "{{count}} reports",
+      "verifiedCount_one": "{{count}} verified",
+      "verifiedCount_other": "{{count}} verified"
+    }
+  },
+  "review": {
+    "photoAlt": "Farmer's photo of {{crop}}",
+    "demoPhoto": "Demo photo",
+    "notFound": "Report not found",
+    "back": "Reports",
+    "title": "Review report #{{id}}",
+    "farmerPhoto": "Farmer's photo",
+    "farmer": "Farmer",
+    "crop": "Crop",
+    "timeline": "Report progress",
+    "aiSaw": "What the AI saw",
+    "notConfirmed": "Not confirmed",
+    "confidence": "AI confidence",
+    "alternatives": "Other possibilities",
+    "other": "Other",
+    "decision": "Officer's decision",
+    "diseaseLabel": "Disease / pest",
+    "adviceLabel": "Advice for the farmer",
+    "sendVoice": "Also send as a Kinyarwanda voice message",
+    "askPhoto": "Ask for a new photo",
+    "verify": "Verify report",
+    "reject": "Reject: not a crop problem",
+    "noAutoAlert": "Verifying a report does not send an alert automatically.",
+    "footerTitle": "The officer makes the final decision.",
+    "footerBody": "All data is demo data · No alert is sent to the community at this step.",
+    "skip": "Skip to next report",
+    "done": {
+      "verified": "Report verified",
+      "needs_photo": "New photo requested",
+      "rejected": "Report rejected",
+      "pending": "Waiting for review"
+    },
+    "createAlert": "Create a community alert",
+    "reopen": "Change decision",
+    "next": "Next report",
+    "steps": {
+      "received": "Photo received",
+      "receivedBody": "The farmer allowed their location to be shared.",
+      "ai": "AI gave a result",
+      "now": "Now",
+      "waiting": "Waiting for review",
+      "waitingBody": "An officer is checking the photo and the AI result."
+    },
+    "defaultAdvice": "Check other plants. Keep the photo; an officer will visit before you choose a pesticide."
+  },
+  "alertForm": {
+    "defaultMessage": "Check your crops. If you see these signs, take a photo and ask your officer. Do not use pesticide without advice from an agricultural officer.",
+    "notFound": "Alert not found",
+    "back": "Alerts",
+    "tooLong": "Keep it under {{max}} characters (2 SMS).",
+    "needReport": "Link at least one verified report.",
+    "title": "Approve community alert",
+    "crop": "Crop",
+    "sector": "Sector",
+    "radius": "Radius",
+    "s1": "Area and recipients",
+    "s2": "Message in Kinyarwanda",
+    "s3": "Supporting verified reports",
+    "reach_one": "About {{count}} farmer will receive it · demo estimate",
+    "reach_other": "About {{count}} farmers will receive it · demo estimate",
+    "level": "Level",
+    "titleLabel": "Title",
+    "messageLabel": "Short advice for farmers",
+    "sms_one": "{{count}} SMS",
+    "sms_other": "{{count}} SMS",
+    "voiceTitle": "Voice message",
+    "voiceBody": "A Kinyarwanda voice version is generated when the alert is sent.",
+    "noVerified": "No verified reports for this crop yet. Verify a report first.",
+    "preview": "How farmers will see it",
+    "previewHint": "Preview before sending",
+    "awaiting": "Awaiting approval",
+    "within": "Within {{km}} km",
+    "confirmFirst": "Confirm first",
+    "check1": "I have reviewed the linked reports.",
+    "check2": "I have checked the message text.",
+    "send": "Approve and send",
+    "tickBoth": "Tick both boxes to send.",
+    "completeForm": "Complete the form to send.",
+    "saveDraft": "Save as draft",
+    "footerTitle": "Every alert needs an officer's approval.",
+    "footerBody": "After approval, farmers in the area receive the text and voice message. All data here is demo data."
+  },
+  "admin": {
+    "overview": {
+      "title": "System overview",
+      "subtitle": "Users, reports and model performance.",
+      "reset": "Reset demo data",
+      "resetConfirm": "Reset all demo reports, alerts and users?",
+      "stats": {
+        "farmers": "Active farmers",
+        "officers": "Active officers",
+        "reports": "Reports",
+        "alertsSent": "Alerts sent"
+      },
+      "byCrop": "Reports by crop",
+      "model": "AI model",
+      "agreement": "Officer agreement",
+      "reviewed": "Reports reviewed",
+      "agreementHint": "Share of verified reports where the officer confirmed the AI's top answer.",
+      "recent": "Latest reports"
+    },
+    "users": {
+      "title": "Users",
+      "subtitle": "Farmers, officers and administrators.",
+      "all": "All",
+      "cols": {
+        "name": "Name",
+        "role": "Role",
+        "phone": "Phone",
+        "location": "Location",
+        "joined": "Joined",
+        "status": "Status"
+      },
+      "toggle": "Click to activate or deactivate",
+      "active": "Active",
+      "inactive": "Inactive"
+    }
+  }
+}
