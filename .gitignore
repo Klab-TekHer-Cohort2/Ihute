@@ -51,6 +51,14 @@ Thumbs.db
 *.keras
 
 # =========================
+# Uploads (farmer photos and voice notes)
+# =========================
+backend/uploads/images/*
+backend/uploads/voice/*
+!backend/uploads/images/.gitignore
+!backend/uploads/voice/.gitignore
+
+# =========================
 # Temporary files
 # =========================
 temp/
