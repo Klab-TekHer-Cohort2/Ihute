@@ -1,13 +1,17 @@
 import { Mic, MicOff, Send, Sparkles } from 'lucide-react'
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { AssistantAnswerText } from '@/components/AssistantAnswer'
 import { PageHeader } from '@/components/ui/Card'
+import { askAssistant, assistantErrorKey, assistantHealth, replyLanguage, type AssistantAnswer } from '@/lib/assistant'
 import { cn } from '@/lib/utils'
 
 interface Message {
   id: number
   from: 'me' | 'bot'
   text: string
+  data?: AssistantAnswer // IHUTE answer (bot only)
+  error?: boolean
 }
 
 const TOPICS = ['armyworm', 'blight', 'fertilizer', 'planting'] as const
@@ -34,31 +38,33 @@ export function AssistantPage() {
   const recRef = useRef<Recognition | null>(null)
   const endRef = useRef<HTMLDivElement>(null)
   const SpeechRecognition = getRecognition()
+  const [health, setHealth] = useState<string | null>(null)
+
+  useEffect(() => {
+    assistantHealth()
+      .then((h) => setHealth(h.status))
+      .catch(() => setHealth('offline'))
+  }, [])
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }, [messages, typing])
 
-  /** Demo answers by keyword; the backend assistant replaces this. */
-  const answer = (q: string) => {
-    const s = q.toLowerCase()
-    if (/nkongwa|armyworm|inyo|worm/.test(s)) return t('farmer.assistant.answers.armyworm')
-    if (/blight|ububore|ibirayi|potato/.test(s)) return t('farmer.assistant.answers.blight')
-    if (/ifumbire|fertili[sz]er|npk|dap/.test(s)) return t('farmer.assistant.answers.fertilizer')
-    if (/gutera|plant|season|igihembwe/.test(s)) return t('farmer.assistant.answers.planting')
-    return t('farmer.assistant.answers.fallback')
-  }
-
-  const ask = (text: string) => {
+  /** Sends the question to our backend, which asks the IHUTE RAG service (20-60 s). */
+  const ask = async (text: string) => {
     const q = text.trim()
-    if (!q) return
+    if (!q || typing) return
     setMessages((m) => [...m, { id: Date.now(), from: 'me', text: q }])
     setInput('')
     setTyping(true)
-    setTimeout(() => {
+    try {
+      const data = await askAssistant(q, replyLanguage(i18n.language))
+      setMessages((m) => [...m, { id: Date.now() + 1, from: 'bot', text: data.answer, data }])
+    } catch (err) {
+      setMessages((m) => [...m, { id: Date.now() + 1, from: 'bot', text: t(assistantErrorKey(err)), error: true }])
+    } finally {
       setTyping(false)
-      setMessages((m) => [...m, { id: Date.now() + 1, from: 'bot', text: answer(q) }])
-    }, 900)
+    }
   }
 
   const toggleMic = () => {
@@ -82,6 +88,12 @@ export function AssistantPage() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col">
       <PageHeader title={t('farmer.assistant.title')} subtitle={t('farmer.assistant.subtitle')} />
+      {health && (
+        <p className="-mt-2 mb-3 flex items-center gap-2 text-sm text-forest-700">
+          <span className={cn('size-2.5 rounded-full', health === 'ready' ? 'bg-brand-500' : health === 'offline' ? 'bg-red-500' : 'bg-harvest-400')} />
+          {t(`farmer.assistant.status.${['ready', 'loading', 'offline'].includes(health) ? health : 'limited'}`)}
+        </p>
+      )}
 
       <div className="flex min-h-[50vh] flex-col gap-3 rounded-3xl bg-white p-4 sm:p-6" aria-live="polite">
         {messages.map((m) => (
@@ -89,17 +101,24 @@ export function AssistantPage() {
             key={m.id}
             className={cn(
               'max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-3 text-[15px] leading-relaxed',
-              m.from === 'me' ? 'ml-auto rounded-br-md bg-brand-600 text-white' : 'rounded-bl-md bg-brand-50 text-forest-900',
+              m.from === 'me'
+                ? 'ml-auto rounded-br-md bg-brand-600 text-white'
+                : m.error
+                  ? 'rounded-bl-md bg-red-50 text-red-800'
+                  : 'rounded-bl-md bg-brand-50 text-forest-900',
             )}
           >
-            {m.text}
+            {m.data ? <AssistantAnswerText data={m.data} /> : m.text}
           </div>
         ))}
         {typing && (
-          <div className="flex w-16 gap-1 rounded-2xl rounded-bl-md bg-brand-50 px-4 py-4" aria-label={t('farmer.assistant.typing')}>
-            {[0, 1, 2].map((i) => (
-              <span key={i} className="size-2 animate-bounce rounded-full bg-brand-400" style={{ animationDelay: `${i * 120}ms` }} />
-            ))}
+          <div className="flex items-center gap-3 self-start rounded-2xl rounded-bl-md bg-brand-50 px-4 py-4" aria-label={t('farmer.assistant.typing')}>
+            <span className="flex gap-1">
+              {[0, 1, 2].map((i) => (
+                <span key={i} className="size-2 animate-bounce rounded-full bg-brand-400" style={{ animationDelay: `${i * 120}ms` }} />
+              ))}
+            </span>
+            <span className="text-sm text-forest-700">{t('farmer.assistant.thinking')}</span>
           </div>
         )}
         <div ref={endRef} />
@@ -110,6 +129,7 @@ export function AssistantPage() {
           <button
             key={k}
             onClick={() => ask(t(`farmer.assistant.suggestions.${k}`))}
+            disabled={typing}
             className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-sm text-forest-800 ring-1 ring-brand-200 hover:ring-brand-400"
           >
             <Sparkles className="size-3.5 text-harvest-500" />
@@ -142,7 +162,7 @@ export function AssistantPage() {
         )}
         <button
           type="submit"
-          disabled={!input.trim()}
+          disabled={!input.trim() || typing}
           aria-label={t('farmer.assistant.send')}
           className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white transition hover:bg-brand-700 disabled:opacity-40"
         >

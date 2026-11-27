@@ -289,6 +289,21 @@
         "fertilizer": "For maize, many farmers use DAP at planting and Urea when plants are knee high. Exact amounts depend on your soil, so ask your officer or the RAB soil test service.",
         "planting": "In most of Rwanda, beans are planted at the start of Season A (September) and Season B (February–March). Plant when the rains are steady.",
         "fallback": "Thanks for your question. I've noted it for your local officer, who can give you a precise answer. For a sick plant, use \"Report a problem\" and add a photo."
+      },
+      "thinking": "Looking for an answer in the farming guides. This can take up to a minute…",
+      "showEnglish": "Show English",
+      "showTranslation": "Show translation",
+      "adviceTitle": "Advice from the IHUTE assistant",
+      "status": {
+        "ready": "Assistant ready",
+        "loading": "Assistant is starting up",
+        "limited": "Assistant has limited answers right now",
+        "offline": "Assistant is offline"
+      },
+      "errors": {
+        "starting": "The assistant is starting up, please try again in a minute.",
+        "unreachable": "The assistant cannot be reached right now. Please try again later.",
+        "generic": "Something went wrong. Please try again."
       }
     }
   },

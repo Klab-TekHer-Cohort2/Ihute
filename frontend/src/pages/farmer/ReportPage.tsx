@@ -1,10 +1,12 @@
-import { Camera, CheckCircle2, ImagePlus, Loader2, RotateCcw, ShieldCheck, Trash2 } from 'lucide-react'
-import { useRef, useState, type FormEvent } from 'react'
+import { Camera, CheckCircle2, ImagePlus, Loader2, RotateCcw, ShieldCheck, Sparkles, Trash2 } from 'lucide-react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useSearchParams } from 'react-router-dom'
+import { AssistantAnswerText } from '@/components/AssistantAnswer'
 import { CropIcon } from '@/components/CropIcon'
 import { Button } from '@/components/ui/Button'
 import { Card, PageHeader } from '@/components/ui/Card'
+import { assistantErrorKey, diagnoseAssistant, replyLanguage, type AssistantAnswer } from '@/lib/assistant'
 import { CROPS, DEMO_DISTRICT, mockDiagnose } from '@/lib/demo-data'
 import { resizeImage } from '@/lib/image'
 import { cn, formatConfidence } from '@/lib/utils'
@@ -180,7 +182,7 @@ export function ReportPage() {
 }
 
 function ReportResult({ report, onAgain }: { report: FieldReport; onAgain: () => void }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   return (
     <div className="mx-auto max-w-2xl space-y-4">
       <div className="flex items-center gap-3 rounded-3xl bg-brand-100 p-5">
@@ -213,6 +215,8 @@ function ReportResult({ report, onAgain }: { report: FieldReport; onAgain: () =>
         </ul>
       </Card>
 
+      <IhuteAdvice key={i18n.language} report={report} />
+
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button variant="secondary" onClick={onAgain} className="h-12 flex-1">
           {t('farmer.report.another')}
@@ -222,5 +226,44 @@ function ReportResult({ report, onAgain }: { report: FieldReport; onAgain: () =>
         </Link>
       </div>
     </div>
+  )
+}
+
+/** After the image diagnosis: ask IHUTE about the predicted disease (20-60 s). */
+function IhuteAdvice({ report }: { report: FieldReport }) {
+  const { t, i18n } = useTranslation()
+  const [data, setData] = useState<AssistantAnswer | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const lang = replyLanguage(i18n.language)
+
+  useEffect(() => {
+    let cancelled = false
+    diagnoseAssistant({ disease_label: report.ai.disease, confidence: report.ai.confidence, crop: report.crop, reply_language: lang })
+      .then((d) => !cancelled && setData(d))
+      .catch((err) => !cancelled && setError(assistantErrorKey(err)))
+    return () => {
+      cancelled = true
+    }
+  }, [report.id, report.ai.disease, report.ai.confidence, report.crop, lang])
+
+  return (
+    <Card>
+      <h3 className="flex items-center gap-2 font-semibold text-forest-900">
+        <Sparkles className="size-4 text-harvest-500" />
+        {t('farmer.assistant.adviceTitle')}
+      </h3>
+      <div className="mt-3 text-[15px] leading-relaxed text-forest-900" aria-live="polite">
+        {data ? (
+          <AssistantAnswerText data={data} />
+        ) : error ? (
+          <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">{t(error)}</p>
+        ) : (
+          <p className="flex items-center gap-2 text-sm text-forest-700">
+            <Loader2 className="size-4 animate-spin" />
+            {t('farmer.assistant.thinking')}
+          </p>
+        )}
+      </div>
+    </Card>
   )
 }

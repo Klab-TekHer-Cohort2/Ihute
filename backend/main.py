@@ -8,6 +8,7 @@ from database import engine, Base, get_db
 import models
 from admin_routes import router as admin_router
 from alerts_routes import router as alerts_router
+from assistant_routes import router as assistant_router
 from auth_routes import router as auth_router
 from reports_routes import router as reports_router
 from review_routes import router as review_router
@@ -30,6 +31,7 @@ app.include_router(reports_router)
 app.include_router(review_router)
 app.include_router(alerts_router)
 app.include_router(admin_router)
+app.include_router(assistant_router)
 
 # Served under /api so the frontend's /api proxy reaches it (photos: /api/uploads/images/xyz.jpg)
 app.mount("/api/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
