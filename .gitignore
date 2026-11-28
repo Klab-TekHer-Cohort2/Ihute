@@ -50,6 +50,8 @@ Thumbs.db
 *.h5
 *.keras
 
+# IHUTE production model
+!backend/models/efficientnet_b0_best.pth
 # =========================
 # Uploads (farmer photos and voice notes)
 # =========================
